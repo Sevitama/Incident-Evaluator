@@ -23,10 +23,6 @@ The Incident Evaluator is a Python-based software designed to assist in evaluati
    ```bash
    cd incident-evaluator
    ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
 ---
 
