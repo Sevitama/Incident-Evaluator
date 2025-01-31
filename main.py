@@ -5,8 +5,8 @@ from AlertProcessor.alert_processor import AlertProcessor
 
 
 DB_URL = "sqlite:///incident_evaluation_results.db"
-RULE_DATA_PATH = "C:/Users/sever/OneDrive/Schule/OST/Module/MSE-Thesis/Scripts/Data/Filled_Incident_Classification_Dataset.csv"
-INCIDENT_HISTORY_PATH = "C:/Users/sever/OneDrive/Schule/OST/Module/MSE-Thesis/Scripts/Data/Incident_Data.csv"
+RULE_DATA_PATH = "./Simulator/Rule_Data_Classification.csv"
+INCIDENT_HISTORY_PATH = "./Simulator/Incident_History.csv"
 
 if __name__ == "__main__":
     DB_MANAGER = DatabaseManager(DB_URL)
