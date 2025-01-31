@@ -22,8 +22,8 @@ class AlertProcessor:
 
     def _get_strategy(self, p: float, gamma_t: float, gamma_n: float, rel_cost_analyst: float, rel_cost_damage: float):
         """Determines alert strategy based on thresholds."""
-        threshold_analyst = rel_cost_analyst / p
-        threshold_siem = rel_cost_damage / p
+        threshold_analyst = rel_cost_analyst / 1 - p
+        threshold_siem = rel_cost_damage / 1 - p
 
         #Full If Else Block for understanding the matrix of the paper
         #if threshold_siem > gamma_t:
@@ -60,7 +60,7 @@ class AlertProcessor:
             tau = rule_data.signal_quality
             gamma_t = self._update_belief(pi, tau)
             gamma_n = self._update_belief(pi, 1 - tau)
-            p = 0.95
+            p = 0.05
 
             notify_analyst = self._get_strategy(p, gamma_t, gamma_n, rule_data.rel_cost_analyst, rule_data.rel_cost_damage)
 
